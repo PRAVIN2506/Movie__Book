@@ -14,7 +14,7 @@ public class MovieServlet extends HttpServlet{
         List<Movie> movies = movieDAO.getAllMovies();
 
         request.setAttribute("movieList",movies);
-        RequestDispatcher dispatcher=request.getRequestDispatcher("pages/movies.jsp");
+        RequestDispatcher dispatcher=request.getRequestDispatcher("/pages/movies.jsp");
         dispatcher.forward(request,response);
     }
 }
